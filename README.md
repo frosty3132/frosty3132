@@ -65,7 +65,7 @@
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=frosty3132&hide_border=true&background=0A0420&ring=FF6EC7&fire=FF6EC7&currStreakNum=5EF2FF&sideNums=F1E4FF&currStreakLabel=FF6EC7&sideLabels=B98CFF&dates=6B5A99&stroke=2A0B47" width="600" alt="streak"/>
   <br/><br/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=frosty3132&bg_color=0a0420&color=b98cff&line=ff6ec7&point=5ef2ff&area=true&area_color=ff6ec7&hide_border=true&custom_title=vibe%20frequency" width="100%" alt="activity graph"/>
+  <img src="https://ghchart.rshah.org/ff6ec7/frosty3132" width="100%" alt="contribution chart"/>
 </div>
 
 <br/>
