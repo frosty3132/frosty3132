@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07021a"/>
+      <stop offset="0.5" stop-color="#1e0a3f"/>
+      <stop offset="0.7" stop-color="#4a1260"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a0b47"/>
+      <stop offset="1" stop-color="#07021a"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe66d"/>
+      <stop offset="0.5" stop-color="#ff7ab6"/>
+      <stop offset="1" stop-color="#b83cff"/>
+    </linearGradient>
+    <linearGradient id="phones" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ef2ff"/>
+      <stop offset="0.5" stop-color="#b98cff"/>
+      <stop offset="1" stop-color="#5ef2ff"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5ef2ff"/>
+      <stop offset="1" stop-color="#2b8cff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="haze" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <clipPath id="above"><rect width="1000" height="720"/></clipPath>
+    <clipPath id="below"><rect y="720" width="1000" height="280"/></clipPath>
+    <mask id="stripes">
+      <rect width="1000" height="1000" fill="#fff"/>
+      <rect y="620" width="1000" height="6" fill="#000"/>
+      <rect y="644" width="1000" height="9" fill="#000"/>
+      <rect y="670" width="1000" height="12" fill="#000"/>
+      <rect y="698" width="1000" height="15" fill="#000"/>
+    </mask>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#fff">
+    <circle cx="180" cy="200" r="4"/><circle cx="290" cy="120" r="3"/><circle cx="420" cy="70" r="3.5"/>
+    <circle cx="600" cy="80" r="3"/><circle cx="720" cy="130" r="4"/><circle cx="830" cy="210" r="3"/>
+    <circle cx="130" cy="330" r="3"/><circle cx="880" cy="340" r="3.5"/><circle cx="520" cy="150" r="2.5"/>
+  </g>
+  <g fill="#ffd6f5">
+    <path d="M800 280 l7 21 21 7 -21 7 -7 21 -7 -21 -21 -7 21 -7z"/>
+    <path d="M220 250 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5z"/>
+  </g>
+
+  <!-- sun -->
+  <g clip-path="url(#above)">
+    <circle cx="500" cy="540" r="330" fill="#ff5fa8" opacity=".45" filter="url(#haze)"/>
+    <circle cx="500" cy="540" r="290" fill="url(#sun)" mask="url(#stripes)"/>
+  </g>
+
+  <!-- floor grid -->
+  <rect y="720" width="1000" height="280" fill="url(#floor)"/>
+  <g clip-path="url(#below)" stroke="#ff3ea5" stroke-width="3" opacity=".8">
+    <line x1="500" y1="720" x2="-900" y2="1000"/>
+    <line x1="500" y1="720" x2="-450" y2="1000"/>
+    <line x1="500" y1="720" x2="-100" y2="1000"/>
+    <line x1="500" y1="720" x2="200" y2="1000"/>
+    <line x1="500" y1="720" x2="500" y2="1000"/>
+    <line x1="500" y1="720" x2="800" y2="1000"/>
+    <line x1="500" y1="720" x2="1100" y2="1000"/>
+    <line x1="500" y1="720" x2="1450" y2="1000"/>
+    <line x1="500" y1="720" x2="1900" y2="1000"/>
+    <line x1="0" x2="1000" y1="728" y2="728"/>
+    <line x1="0" x2="1000" y1="742" y2="742"/>
+    <line x1="0" x2="1000" y1="764" y2="764"/>
+    <line x1="0" x2="1000" y1="796" y2="796"/>
+    <line x1="0" x2="1000" y1="840" y2="840"/>
+    <line x1="0" x2="1000" y1="900" y2="900"/>
+    <line x1="0" x2="1000" y1="980" y2="980"/>
+  </g>
+  <rect y="716" width="1000" height="7" fill="#ff6ec7" filter="url(#glow)"/>
+
+  <!-- headphones -->
+  <g filter="url(#glow)">
+    <path d="M178 560 A322 322 0 0 1 822 560" fill="none" stroke="url(#phones)" stroke-width="30" stroke-linecap="round"/>
+    <rect x="140" y="480" width="86" height="170" rx="36" fill="url(#cup)"/>
+    <rect x="774" y="480" width="86" height="170" rx="36" fill="url(#cup)"/>
+  </g>
+  <rect x="160" y="505" width="18" height="120" rx="9" fill="#e9fdff" opacity=".7"/>
+  <rect x="822" y="505" width="18" height="120" rx="9" fill="#e9fdff" opacity=".7"/>
+
+  <!-- pixel sunglasses -->
+  <g fill="#0a0420">
+    <rect x="270" y="420" width="460" height="26"/>
+    <rect x="300" y="420" width="180" height="96"/>
+    <rect x="322" y="516" width="136" height="24"/>
+    <rect x="520" y="420" width="180" height="96"/>
+    <rect x="542" y="516" width="136" height="24"/>
+  </g>
+  <g fill="#ffffff">
+    <rect x="326" y="450" width="22" height="22"/>
+    <rect x="348" y="472" width="22" height="22"/>
+    <rect x="546" y="450" width="22" height="22"/>
+    <rect x="568" y="472" width="22" height="22"/>
+  </g>
+
+  <!-- smirk -->
+  <path d="M430 586 Q500 626 580 576" fill="none" stroke="#5a1670" stroke-width="16" stroke-linecap="round"/>
+</svg>
