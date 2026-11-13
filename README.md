@@ -39,7 +39,6 @@
 
 <div align="center">
   <a href="https://github.com/frosty3132/nebula-player"><img src="./assets/card-nebula.svg" width="400" alt="nebula-player"/></a>
-  <a href="https://github.com/frosty3132/DKBot"><img src="./assets/card-dkbot.svg" width="400" alt="DKBot"/></a>
 </div>
 
 <br/>
