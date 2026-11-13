@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150">
+  <defs>
+    <linearGradient id="w" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6ec7"/>
+      <stop offset="0.5" stop-color="#b98cff"/>
+      <stop offset="1" stop-color="#5ef2ff"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#w)" opacity=".35">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite"
+      values="M0 70 C200 30 400 110 600 70 C800 30 1000 110 1200 70 L1200 150 L0 150Z;
+              M0 70 C200 110 400 30 600 70 C800 110 1000 30 1200 70 L1200 150 L0 150Z;
+              M0 70 C200 30 400 110 600 70 C800 30 1000 110 1200 70 L1200 150 L0 150Z"/>
+  </path>
+  <path fill="url(#w)" opacity=".6">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite"
+      values="M0 95 C250 125 450 65 600 95 C750 125 950 65 1200 95 L1200 150 L0 150Z;
+              M0 95 C250 65 450 125 600 95 C750 65 950 125 1200 95 L1200 150 L0 150Z;
+              M0 95 C250 125 450 65 600 95 C750 125 950 65 1200 95 L1200 150 L0 150Z"/>
+  </path>
+  <rect y="118" width="1200" height="32" fill="#0a0420"/>
+  <text x="600" y="140" text-anchor="middle" font-family="'JetBrains Mono',Consolas,monospace" font-size="15" letter-spacing="4" fill="#f1e4ff">KEEP CALM &amp; VIBE CODE</text>
+</svg>

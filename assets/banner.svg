@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07021a"/>
+      <stop offset="0.55" stop-color="#1e0a3f"/>
+      <stop offset="1" stop-color="#4a1260"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a0b47"/>
+      <stop offset="1" stop-color="#090218"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe66d"/>
+      <stop offset="0.45" stop-color="#ff7ab6"/>
+      <stop offset="1" stop-color="#b83cff"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#ff6ec7"/>
+      <stop offset="0.5" stop-color="#b98cff"/>
+      <stop offset="1" stop-color="#5ef2ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0;0.6 0;0 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="above"><rect x="0" y="0" width="1200" height="250"/></clipPath>
+    <clipPath id="below"><rect x="0" y="250" width="1200" height="110"/></clipPath>
+    <mask id="stripes">
+      <rect x="0" y="0" width="1200" height="360" fill="#fff"/>
+      <rect x="0" y="186" width="1200" height="3" fill="#000"/>
+      <rect x="0" y="200" width="1200" height="5" fill="#000"/>
+      <rect x="0" y="214" width="1200" height="7" fill="#000"/>
+      <rect x="0" y="228" width="1200" height="9" fill="#000"/>
+      <rect x="0" y="242" width="1200" height="11" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1200" height="360" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#fff">
+    <circle cx="80" cy="40" r="1.4"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="190" cy="70" r="1"><animate attributeName="opacity" values=".3;1;.3" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="30" r="1.6"><animate attributeName="opacity" values="1;.3;1" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="430" cy="90" r="1"><animate attributeName="opacity" values=".2;1;.2" dur="3.3s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="45" r="1.3"><animate attributeName="opacity" values="1;.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="610" cy="120" r="1"><animate attributeName="opacity" values=".4;1;.4" dur="3.6s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="25" r="1.5"><animate attributeName="opacity" values="1;.3;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="75" r="1"><animate attributeName="opacity" values=".3;1;.3" dur="4.2s" repeatCount="indefinite"/></circle>
+    <circle cx="840" cy="35" r="1.2"><animate attributeName="opacity" values="1;.2;1" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="1060" cy="50" r="1.6"><animate attributeName="opacity" values=".2;1;.2" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="1140" cy="95" r="1"><animate attributeName="opacity" values="1;.4;1" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1170" cy="20" r="1.2"><animate attributeName="opacity" values=".3;1;.3" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="40" cy="150" r="1"><animate attributeName="opacity" values="1;.3;1" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="170" r="1.1"><animate attributeName="opacity" values=".2;1;.2" dur="4.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1110" cy="170" r="1.3"><animate attributeName="opacity" values="1;.2;1" dur="2.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- sparkles -->
+  <g fill="#ffd6f5">
+    <path d="M720 150 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M1150 130 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite"/></path>
+    <path d="M250 125 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"><animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite"/></path>
+  </g>
+
+  <!-- retro sun -->
+  <g clip-path="url(#above)">
+    <circle cx="950" cy="250" r="150" fill="#ff5fa8" opacity=".35" filter="url(#softglow)"/>
+    <circle cx="950" cy="250" r="128" fill="url(#sun)" mask="url(#stripes)"/>
+  </g>
+
+  <!-- floor -->
+  <rect x="0" y="250" width="1200" height="110" fill="url(#floor)"/>
+  <g clip-path="url(#below)" stroke="#ff3ea5" stroke-width="1.4" fill="none" opacity=".75">
+    <!-- perspective verticals -->
+    <line x1="600" y1="250" x2="-1200" y2="360"/>
+    <line x1="600" y1="250" x2="-800" y2="360"/>
+    <line x1="600" y1="250" x2="-450" y2="360"/>
+    <line x1="600" y1="250" x2="-150" y2="360"/>
+    <line x1="600" y1="250" x2="120" y2="360"/>
+    <line x1="600" y1="250" x2="370" y2="360"/>
+    <line x1="600" y1="250" x2="600" y2="360"/>
+    <line x1="600" y1="250" x2="830" y2="360"/>
+    <line x1="600" y1="250" x2="1080" y2="360"/>
+    <line x1="600" y1="250" x2="1350" y2="360"/>
+    <line x1="600" y1="250" x2="1650" y2="360"/>
+    <line x1="600" y1="250" x2="2000" y2="360"/>
+    <line x1="600" y1="250" x2="2400" y2="360"/>
+    <!-- moving horizontals (each slides to the next slot => seamless loop) -->
+    <line x1="0" x2="1200" y1="252" y2="252"><animate attributeName="y1" values="252;256" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="252;256" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="256" y2="256"><animate attributeName="y1" values="256;262" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="256;262" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="262" y2="262"><animate attributeName="y1" values="262;270" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="262;270" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="270" y2="270"><animate attributeName="y1" values="270;281" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="270;281" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="281" y2="281"><animate attributeName="y1" values="281;295" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="281;295" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="295" y2="295"><animate attributeName="y1" values="295;313" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="295;313" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="313" y2="313"><animate attributeName="y1" values="313;335" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="313;335" dur="1.2s" repeatCount="indefinite"/></line>
+    <line x1="0" x2="1200" y1="335" y2="335"><animate attributeName="y1" values="335;362" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y2" values="335;362" dur="1.2s" repeatCount="indefinite"/></line>
+  </g>
+  <!-- horizon glow -->
+  <rect x="0" y="248" width="1200" height="3" fill="#ff6ec7" filter="url(#glow)"/>
+
+  <!-- text -->
+  <g font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace">
+    <text x="72" y="92" font-size="22" fill="#5ef2ff">&gt; whoami</text>
+  </g>
+  <g font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="88" letter-spacing="1">
+    <text x="68" y="182" fill="url(#txt)" opacity=".55" filter="url(#glow)">frosty3132</text>
+    <text x="68" y="182" fill="url(#txt)">frosty3132</text>
+  </g>
+  <g font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace" font-size="21" fill="#f1e4ff">
+    <text x="72" y="228">vibe coder · SHIMSK VIBE · prompt → ship → repeat<tspan fill="#ff6ec7"> ▍<animate attributeName="fill-opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+  </g>
+</svg>

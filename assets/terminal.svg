@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="340" viewBox="0 0 860 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#140830"/>
+      <stop offset="1" stop-color="#0a0420"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6ec7"/>
+      <stop offset="1" stop-color="#5ef2ff"/>
+    </linearGradient>
+    <!-- typing reveals: width animates 0 -> full within a 14s loop -->
+    <clipPath id="c1"><rect x="0" y="60" height="34" width="0"><animate attributeName="width" values="0;0;860;860" keyTimes="0;.02;.07;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c3"><rect x="0" y="116" height="34" width="0"><animate attributeName="width" values="0;0;860;860" keyTimes="0;.13;.26;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c5"><rect x="0" y="172" height="34" width="0"><animate attributeName="width" values="0;0;860;860" keyTimes="0;.33;.43;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c7"><rect x="0" y="228" height="34" width="0"><animate attributeName="width" values="0;0;860;860" keyTimes="0;.50;.63;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="858" height="338" rx="14" fill="url(#bg)" stroke="url(#edge)" stroke-width="2"/>
+  <rect x="2" y="2" width="856" height="36" rx="13" fill="#1d0e40"/>
+  <rect x="2" y="26" width="856" height="12" fill="#1d0e40"/>
+  <circle cx="26" cy="20" r="6.5" fill="#ff5f87"/>
+  <circle cx="48" cy="20" r="6.5" fill="#ffd166"/>
+  <circle cx="70" cy="20" r="6.5" fill="#5ef2a0"/>
+  <text x="430" y="25" text-anchor="middle" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#a99bd6">frosty@vibe: ~/projects</text>
+
+  <g font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace" font-size="17">
+    <!-- 1: command -->
+    <text x="26" y="82" clip-path="url(#c1)"><tspan fill="#ff6ec7">❯</tspan><tspan fill="#f1e4ff"> whoami</tspan></text>
+    <!-- 2: output -->
+    <text x="26" y="110" fill="#b98cff" opacity="0">frosty3132 — вайб-кодер из SHIMSK VIBE
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.09;.091;1" dur="14s" repeatCount="indefinite"/></text>
+    <!-- 3: command -->
+    <text x="26" y="138" clip-path="url(#c3)"><tspan fill="#ff6ec7">❯</tspan><tspan fill="#f1e4ff"> claude</tspan><tspan fill="#ffe66d"> "сделай красиво, и чтоб работало"</tspan></text>
+    <!-- 4: output -->
+    <text x="26" y="166" opacity="0"><tspan fill="#5ef2a0">✓ vibes loaded   ✓ bugs → features   ✓ 0 docs read</tspan>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.29;.291;1" dur="14s" repeatCount="indefinite"/></text>
+    <!-- 5: command -->
+    <text x="26" y="194" clip-path="url(#c5)"><tspan fill="#ff6ec7">❯</tspan><tspan fill="#f1e4ff"> cargo run --release</tspan><tspan fill="#6b5a99">  # nebula-player</tspan></text>
+    <!-- 6: output -->
+    <text x="26" y="222" fill="#5ef2ff" opacity="0">♪ now playing: lofi beats to vibe-code to
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.46;.461;1" dur="14s" repeatCount="indefinite"/></text>
+    <!-- 7: command -->
+    <text x="26" y="250" clip-path="url(#c7)"><tspan fill="#ff6ec7">❯</tspan><tspan fill="#f1e4ff"> git commit -m</tspan><tspan fill="#ffe66d"> "it just works™"</tspan><tspan fill="#f1e4ff"> &amp;&amp; git push</tspan></text>
+    <!-- 8: output -->
+    <text x="26" y="278" fill="#b98cff" opacity="0">→ shipped. потрогать траву? может, после следующего коммита.
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.67;.671;1" dur="14s" repeatCount="indefinite"/></text>
+    <!-- 9: idle prompt -->
+    <text x="26" y="306" opacity="0"><tspan fill="#ff6ec7">❯</tspan><tspan fill="#f1e4ff"> ▍<animate attributeName="fill-opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1s" repeatCount="indefinite"/></tspan>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.71;.711;1" dur="14s" repeatCount="indefinite"/></text>
+  </g>
+</svg>
